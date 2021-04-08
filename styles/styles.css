@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --very-light-gray: hsl(0, 0%, 95%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --mobile: 375px;
+  --desktop: 1440px;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lexend Deca", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  background-color: var(--very-light-gray);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Big Shoulders Display";
+  text-transform: uppercase;
+  color: var(--very-light-gray);
+}
+
+p {
+  color: var(--transparent-white);
+  line-height: 1.8;
+}
+
+.main {
+  max-width: 320px;
+  margin: 1em auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  width: 100%;
+  height: 400px;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+}
+.card:first-child {
+  border-radius: 0.5em 0.5em 0 0;
+}
+.card:last-child {
+  border-radius: 0 0 0.5em 0.5em;
+}
+
+.card.orange {
+  background-color: var(--bright-orange);
+}
+
+.card.dark-cyan {
+  background-color: var(--dark-cyan);
+}
+
+.card.very-dark-cyan {
+  background-color: var(--very-dark-cyan);
+}
+
+.img {
+  width: 50px;
+  height: 28px;
+  flex: 0 0 10%;
+  margin-bottom: 15%;
+}
+
+.title {
+  flex: 0 0 10%;
+  margin-bottom: 5%;
+}
+
+.paragraph {
+  flex: 0 0 50%;
+}
+
+.btn {
+  width: 55%;
+  padding: 1em;
+  border: none;
+  border-radius: 50px;
+  background-color: var(--very-light-gray);
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid white;
+  transition: background-color 0.1s ease;
+  flex: 0 0 10%;
+}
+
+.btn.orange {
+  color: var(--bright-orange);
+}
+.btn.dark-cyan {
+  color: var(--dark-cyan);
+}
+.btn.very-dark-cyan {
+  color: var(--very-dark-cyan);
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.attribution {
+  text-align: center;
+  padding: 1em;
+}
+
+@media (min-width: 1440px) {
+  .main {
+    max-width: 1024px;
+    flex-direction: row;
+  }
+
+  .card {
+    height: 500px;
+  }
+
+  .card:first-child {
+    border-radius: 0.5em 0 0 0.5em;
+  }
+  .card:last-child {
+    border-radius: 0 0.5em 0.5em 0;
+  }
+}
